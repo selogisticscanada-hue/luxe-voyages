@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - LUXE VOYAGES</title>
+  <style>
+    :root{
+      --bg:#07111f;
+      --panel:rgba(9,15,27,0.92);
+      --text:#eff6ff;
+      --muted:#dbe7f7;
+      --accent:#25D366;
+      --line:rgba(255,255,255,0.12);
+      --shadow:0 18px 36px rgba(0,0,0,0.25);
+    }
+    *{box-sizing:border-box; margin:0; padding:0; font-family:Arial, Helvetica, sans-serif;}
+    body{
+      min-height:100vh;
+      background:
+        linear-gradient(135deg, rgba(7,17,31,0.96), rgba(6,11,19,0.98)),
+        url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover fixed no-repeat;
+      color:var(--text);
+    }
+    .page{width:min(1200px, calc(100% - 24px)); margin:0 auto; padding:18px 0 40px;}
+    .top{display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:14px;}
+    .pill{display:inline-block; border:1px solid var(--line); background:rgba(255,255,255,0.08); color:#fff; border-radius:999px; padding:8px 12px; font-size:12px; text-transform:uppercase; letter-spacing:1px; backdrop-filter:blur(8px);}
+    .ghost-btn,.btn{display:inline-flex; align-items:center; justify-content:center; text-decoration:none; border-radius:999px; font-weight:800; padding:10px 14px; border:1px solid transparent; transition:transform .18s ease; cursor:pointer; font-size:14px;}
+    .ghost-btn{background:rgba(255,255,255,0.08); color:#fff; border-color:var(--line); backdrop-filter:blur(8px);}
+    .ghost-btn:hover,.btn:hover{transform:translateY(-1px);}
+    .btn{background:linear-gradient(135deg, var(--accent), #1fbf5a); color:#fff; box-shadow:0 8px 16px rgba(37,211,102,0.25);}
+    .hero, .card{background:linear-gradient(180deg, rgba(9,15,27,0.9), rgba(10,18,30,0.95)); border:1px solid var(--line); border-radius:28px; box-shadow:var(--shadow); backdrop-filter:blur(10px);}
+    .hero{padding:18px; margin-bottom:18px;}
+    .eyebrow{font-size:12px; text-transform:uppercase; letter-spacing:2px; color:#8ecbff;}
+    h1{font-size:clamp(2rem, 5vw, 3rem); line-height:1.05; margin:8px 0 10px;}
+    h2{font-size:1.08rem; color:#fff; margin-bottom:8px;}
+    p, li{color:var(--muted); line-height:1.7; font-size:15px;}
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+    .card{padding:18px;}
+    .photo-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:12px; margin-top:12px;}
+    .photo{border-radius:18px; overflow:hidden; border:1px solid var(--line); background:rgba(255,255,255,0.06);}
+    .photo img{display:block; width:100%; height:140px; object-fit:cover;}
+    .photo span{display:block; padding:8px 10px; color:#dff7ff; font-size:12px;}
+    .section{margin-top:18px;}
+    .list{padding-left:18px;}
+    .cta-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px;}
+    @media (max-width:980px){.grid{grid-template-columns:1fr;}}
+    @media (max-width:640px){.photo-grid{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="top">
+      <span class="pill">About Us</span>
+      <a class="ghost-btn" href="index.html">← Back to Home</a>
+    </div>
+
+    <section class="hero">
+      <p class="eyebrow">LUXE VOYAGES</p>
+      <h1>Welcome to Luxe Voyages — Where Journeys Become Stories</h1>
+      <p>At Luxe Voyages, travel isn’t just a service — it’s a calling. Founded by two lifelong friends with a shared love for exploration, culture, and discovery, we create journeys that inspire, comfort, and stay with you forever.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://wa.me/918891985017" target="_blank">Plan Your Trip</a>
+        <a class="ghost-btn" href="index.html">Back to Home</a>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Our Story</h2>
+        <p>Our company was born from countless miles walked, peaks conquered, and cultures embraced — from the sacred halls of the Kailasa Temple in India to the alpine beauty of Banff National Park and the challenging heights of L2 and beyond. These experiences forged our vision: to share the soul of travel with warmth, luxury, and purpose.</p>
+        <p style="margin-top:10px;">We blend adventure, academic insight, and global experience to create journeys that are seamless, meaningful, and deeply personal.</p>
+      </article>
+
+      <article class="card">
+        <h2>Our Founders</h2>
+        <p><strong>A Mechanical Engineer Turned Explorer</strong><br/>One half of our team is a mechanical engineer with a degree from Canada, later specializing in Project Management. With a fine eye for detail and a love for wild trails and ancient places, he brings technical precision to every itinerary.</p>
+        <p style="margin-top:10px;"><strong>A Business Visionary With a Wanderer’s Heart</strong><br/>The other half brings a Business Management background from Canada and a passion for authentic experiences, ensuring every journey is both flawless and emotionally enriching.</p>
+      </article>
+    </section>
+
+    <section class="card section">
+      <h2>Our Proud Honorary Backers</h2>
+      <p><strong>A Veteran Businessman and Pilgrimage Specialist</strong><br/>With over 15 years in tourism, he is a trusted name in Indian tour packages and pilgrimage travel, including highly specialized Hajj journeys to Mecca.</p>
+      <p style="margin-top:10px;"><strong>A Master Tour Operator with Deep Local Insight</strong><br/>With strong experience in hotel operations, resort management, and Lakshadweep cottage and tour packages, he brings unmatched on-ground knowledge and luxury travel insight.</p>
+    </section>
+
+    <section class="card section">
+      <h2>Our Destinations</h2>
+      <ul class="list">
+        <li>Lakshadweep — pristine coral islands, beaches, and marine beauty.</li>
+        <li>The Western Ghats — hidden hill stations, misty trails, and biodiversity hotspots.</li>
+        <li>Indian Pilgrimages — sacred journeys filled with culture, meaning, and tradition.</li>
+      </ul>
+      <p style="margin-top:10px;">Every destination we offer is infused with personal experience and curated with heart, ensuring you don’t just visit a place — you truly feel it.</p>
+    </section>
+
+    <section class="card section">
+      <h2>Why Travel with Luxe Voyages?</h2>
+      <ul class="list">
+        <li>Personalized itineraries built by true travelers, not just agents.</li>
+        <li>Authentic experiences that go beyond tourist trails.</li>
+        <li>Expertise and precision backed by engineering logic, planning, and business acumen.</li>
+        <li>Local partnerships that bring you closer to culture, nature, and community.</li>
+      </ul>
+    </section>
+
+    <section class="card section">
+      <h2>Travel Refined, Stories Redefined</h2>
+      <p>Whether you’re chasing waves in Lakshadweep, trekking the Western Ghats, or seeking blessings in sacred temples, let Luxe Voyages help you write your next unforgettable chapter.</p>
+      <div class="photo-grid">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Mountain landscape" /><span>Mountain escapes</span></div>
+        <div class="photo"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach destination" /><span>Island getaways</span></div>
+        <div class="photo"><img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963" alt="Cultural journey" /><span>Culture & heritage</span></div>
+        <div class="photo"><img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98" alt="Travel experience" /><span>Luxury travel</span></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

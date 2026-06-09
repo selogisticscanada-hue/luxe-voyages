@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bali Package - LUXE VOYAGES</title>
+  <style>
+    :root{
+      --bg:#07111f;
+      --panel:rgba(9,15,27,0.88);
+      --text:#eff6ff;
+      --muted:#dbe7f7;
+      --accent:#25D366;
+      --line:rgba(255,255,255,0.12);
+      --shadow:0 18px 36px rgba(0,0,0,0.25);
+    }
+
+    *{ box-sizing:border-box; margin:0; padding:0; font-family: Arial, Helvetica, sans-serif; }
+
+    body{
+      min-height:100vh;
+      background:
+        linear-gradient(135deg, rgba(7,17,31,0.96), rgba(6,11,19,0.98)),
+        url('https://images.unsplash.com/photo-1537996194471-e657df975ab4') center/cover fixed no-repeat;
+      color:var(--text);
+    }
+
+    .page{ width:min(1180px, calc(100% - 24px)); margin:0 auto; padding:18px 0 40px; }
+    .top{ display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:14px; }
+    .pill{ display:inline-block; border:1px solid var(--line); background:rgba(255,255,255,0.08); color:#fff; border-radius:999px; padding:8px 12px; font-size:12px; text-transform:uppercase; letter-spacing:1px; backdrop-filter:blur(8px); }
+
+    .ghost-btn,.btn{ display:inline-flex; align-items:center; justify-content:center; text-decoration:none; border-radius:999px; font-weight:800; padding:10px 14px; border:1px solid transparent; transition:transform .18s ease; cursor:pointer; font-size:14px; }
+    .ghost-btn{ background:rgba(255,255,255,0.08); color:#fff; border-color:var(--line); backdrop-filter:blur(8px); }
+    .ghost-btn:hover,.btn:hover{ transform:translateY(-1px); }
+    .btn{ background:linear-gradient(135deg, var(--accent), #1fbf5a); color:#fff; box-shadow:0 8px 16px rgba(37,211,102,0.25); }
+
+    .hero{ display:grid; grid-template-columns:1.1fr .9fr; gap:18px; margin-bottom:18px; }
+    .card{ background:linear-gradient(180deg, rgba(9,15,27,0.9), rgba(10,18,30,0.95)); border:1px solid var(--line); border-radius:28px; box-shadow:var(--shadow); padding:18px; backdrop-filter:blur(10px); }
+    .eyebrow{ font-size:12px; text-transform:uppercase; letter-spacing:2px; color:#8ecbff; }
+    h1{ font-size:clamp(2rem, 5vw, 3rem); line-height:1.05; margin:8px 0 10px; }
+    p{ color:var(--muted); line-height:1.6; font-size:15px; }
+    .highlight-badge{ display:inline-block; margin-top:8px; padding:8px 10px; border-radius:999px; background:linear-gradient(135deg, rgba(56,189,248,0.18), rgba(37,211,102,0.12)); border:1px solid rgba(56,189,248,0.25); color:#dff7ff; font-size:12px; font-weight:700; letter-spacing:0.4px; }
+
+    .mini-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:10px; margin-top:14px; }
+    .mini{ background:rgba(255,255,255,0.06); border:1px solid var(--line); border-radius:16px; padding:10px; }
+    .mini strong{ display:block; color:#fff; font-size:13px; margin-bottom:4px; }
+    .mini span{ color:var(--muted); font-size:13px; line-height:1.5; }
+
+    .price-box{ display:flex; flex-direction:column; justify-content:space-between; }
+    .price-tag{ font-size:1.8rem; font-weight:800; color:#fff; }
+    .price-note{ color:var(--muted); font-size:14px; line-height:1.5; margin:8px 0 12px; }
+    .stats{ display:grid; gap:10px; margin-top:12px; }
+    .stat{ display:flex; justify-content:space-between; gap:10px; background:rgba(255,255,255,0.05); border:1px solid var(--line); border-radius:14px; padding:10px 12px; }
+    .stat b{ color:#fff; font-size:14px; }
+    .stat span{ color:var(--muted); font-size:13px; }
+    .cta{ display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+
+    .section-grid{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:18px; }
+    .panel{ padding:18px; }
+    .panel h2{ color:#fff; font-size:1.15rem; margin-bottom:10px; }
+    .panel ul{ padding-left:16px; color:var(--muted); line-height:1.6; font-size:14px; }
+    .panel li{ margin-bottom:8px; }
+
+    .itinerary{ display:grid; gap:10px; margin-top:10px; }
+    .step{ background:rgba(255,255,255,0.05); border:1px solid var(--line); border-radius:16px; padding:12px; }
+    .step strong{ display:block; color:#fff; margin-bottom:4px; font-size:14px; }
+
+    .footer-note{ color:#dbe7f7; text-align:center; font-size:12px; margin-top:14px; }
+
+    @media (max-width:980px){ .hero, .section-grid{ grid-template-columns:1fr; } }
+    @media (max-width:640px){ .mini-grid{ grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="top">
+      <span class="pill">Bali • 4 Days / 3 Nights</span>
+      <a class="ghost-btn" href="index.html">← Back to Home</a>
+    </div>
+
+    <section class="hero">
+      <article class="card">
+        <p class="eyebrow">LUXE VOYAGES</p>
+        <h1>BALI PACKAGE</h1>
+        <p>
+          A curated Bali escape with beach visits, temple sightseeing, waterfalls, scenic viewpoints, and complimentary adventure activities for our Luxe customers. This version reflects the exact itinerary you shared for a smooth and memorable holiday.
+        </p>
+        <span class="highlight-badge">✅ 4 Days • 3 Nights • Premium Bali experience</span>
+
+        <div class="mini-grid">
+          <div class="mini"><strong>Trip style</strong><span>Comfortable private transfers, scenic sightseeing, and curated island experiences.</span></div>
+          <div class="mini"><strong>Best for</strong><span>Families, couples, and travelers looking for a fun Bali getaway.</span></div>
+          <div class="mini"><strong>Duration</strong><span>4 Days / 3 Nights with hotel stay, tours, and private car travel.</span></div>
+          <div class="mini"><strong>Support</strong><span>WhatsApp assistance, private transfer support, and flexible travel planning.</span></div>
+        </div>
+      </article>
+
+      <article class="card price-box">
+        <div>
+          <p class="eyebrow">Starting From</p>
+          <div class="price-tag">On request</div>
+          <p class="price-note">This itinerary reflects your updated Bali travel plan. Please confirm the final rate and hotel category directly with us.</p>
+          <div class="stats">
+            <div class="stat"><b>Stay</b><span>3 nights</span></div>
+            <div class="stat"><b>Transfers</b><span>Airport pickup &amp; drop</span></div>
+            <div class="stat"><b>Highlights</b><span>Beaches, temple visits, waterfalls, viewpoints</span></div>
+            <div class="stat"><b>Plan</b><span>4 days / 3 nights</span></div>
+          </div>
+        </div>
+
+        <div class="cta">
+          <a class="btn" href="https://wa.me/918891985017" target="_blank">Enquire on WhatsApp</a>
+          <a class="ghost-btn" href="index.html">Back to Home</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section-grid">
+      <article class="card panel">
+        <h2>✅ Inclusions</h2>
+        <ul>
+          <li>Airport pickup &amp; drop</li>
+          <li>3-night hotel accommodation</li>
+          <li>3 x breakfast</li>
+          <li>Tanjung Benoa Beach visit</li>
+          <li>Melasti / Padang Padang Beach visit</li>
+          <li>Jet Ski</li>
+          <li>Parasailing</li>
+          <li>Banana Boat</li>
+          <li>ATV off-road ride</li>
+          <li>Alas Harum Bali Swing</li>
+          <li>Kintamani mountain / Mount Batur viewpoint</li>
+          <li>Uluwatu Temple visit</li>
+          <li>Tegenungan Waterfalls</li>
+          <li>All travel in private A/C car</li>
+        </ul>
+      </article>
+
+      <article class="card panel">
+        <h2>❌ Exclusions</h2>
+        <ul>
+          <li>Flight tickets</li>
+          <li>Any personal shopping or extra meals not listed</li>
+          <li>Optional activities beyond the package inclusions</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="card panel" style="margin-top:18px;">
+      <h2>📅 Updated Itinerary</h2>
+      <div class="itinerary">
+        <div class="step"><strong>Day 1</strong>Arrival at Ngurah Rai Airport, transfer to hotel, check-in, relax, and enjoy the day with Tanjung Benoa, Melasti / Padang Padang Beach, and Uluwatu Temple visit.</div>
+        <div class="step"><strong>Day 2</strong>Breakfast, water sports, off-road adventure, rice field visit, countryside exploration, Kintamani visit, and Mount Batur viewpoint.</div>
+        <div class="step"><strong>Day 3</strong>Breakfast, parasailing, banana boat ride, ATV tandem ride, Alas Harum Bali Swing, Tegenungan Waterfalls, and evening walk. Complimentary activities are included for our Luxe customers.</div>
+        <div class="step"><strong>Day 4</strong>Breakfast, check-out, hotel to airport transfer, and departure.</div>
+      </div>
+    </section>
+
+    <p class="footer-note">WhatsApp: +91 8891985017 • Instagram: <a href="https://www.instagram.com/luxevoyages.in?igsh=MWtnb2RveXp1anB6ZQ==" target="_blank" style="color:#8ecbff; text-decoration:none;">@luxevoyages.in</a></p>
+  </main>
+</body>
+</html>

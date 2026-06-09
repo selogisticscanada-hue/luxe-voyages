@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUXE VOYAGES</title>
+
+<style>
+:root{
+  --bg:#07111f;
+  --panel:rgba(255,255,255,0.92);
+  --text:#102033;
+  --muted:#506178;
+  --accent:#25D366;
+  --shadow:0 18px 32px rgba(7,17,31,0.18);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, Helvetica, sans-serif;}
+
+body{
+  background:
+    radial-gradient(circle at top, #ffffff 0%, #edf4ff 35%, #eff5fb 100%);
+  color:var(--text);
+  min-height:100vh;
+}
+
+::selection{background:rgba(37,211,102,0.18); color:#0f172a;}
+
+.site-shell{width:min(1200px, calc(100% - 24px)); margin:0 auto;}
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:
+    linear-gradient(135deg, rgba(5,10,18,0.25) 0%, rgba(7,12,20,0.55) 45%, rgba(10,17,28,0.78) 100%),
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80');
+  background-size:cover;
+  background-position:center;
+  padding:24px 0;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero::before,
+.hero::after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  filter:blur(60px);
+  opacity:.18;
+  pointer-events:none;
+}
+
+.hero::before{
+  width:280px;
+  height:280px;
+  background:radial-gradient(circle, #38bdf8 0%, rgba(56,189,248,0) 70%);
+  top:-80px;
+  left:-60px;
+}
+
+.hero::after{
+  width:320px;
+  height:320px;
+  background:radial-gradient(circle, #34d399 0%, rgba(52,211,153,0) 70%);
+  right:-100px;
+  bottom:-120px;
+}
+
+.hero-content{
+  width:min(980px, 100%);
+  background:
+    linear-gradient(135deg, rgba(8,15,27,0.72), rgba(15,23,42,0.70));
+  border:1px solid rgba(255,255,255,0.18);
+  border-radius:28px;
+  color:white;
+  text-align:center;
+  padding:36px 18px;
+  box-shadow:
+    0 18px 40px rgba(2,6,23,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+  position:relative;
+  z-index:1;
+}
+
+.hero-content::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:28px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  z-index:-1;
+}
+
+.logo{width:150px; margin:0 auto 14px; display:block;}
+
+.eyebrow{display:inline-block; font-size:12px; text-transform:uppercase; letter-spacing:2px; color:#9dd7ff; margin-bottom:8px;}
+
+.hero h1{font-size:clamp(2.4rem, 8vw, 4.6rem); line-height:1.05; margin-bottom:12px;}
+
+.hero p{font-size:clamp(1rem, 2vw, 1.25rem); line-height:1.6; color:#edf4ff; margin-bottom:18px; max-width:700px; margin-left:auto; margin-right:auto;}
+
+.badge-row{display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:14px;}
+
+.badge{padding:10px 12px; border:1px solid rgba(255,255,255,0.16); border-radius:999px; background:linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.06)); font-size:13px; color:#eff6ff; box-shadow:0 8px 18px rgba(2,6,23,0.18);}
+
+.btn{display:inline-flex; align-items:center; justify-content:center; background:linear-gradient(135deg, #25D366, #1fbf5a); color:white; text-decoration:none; padding:14px 24px; border-radius:999px; font-size:17px; font-weight:800; transition:transform .18s ease, box-shadow .18s ease; box-shadow:0 10px 18px rgba(37,211,102,0.22);}
+.btn:hover{transform:translateY(-2px); box-shadow:0 16px 22px rgba(37,211,102,0.28);}
+.social-link{display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; border-radius:999px; background:linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); border:1px solid rgba(255,255,255,0.18); color:#fff; text-decoration:none; transition:transform .18s ease, box-shadow .18s ease; vertical-align:middle; box-shadow:0 10px 18px rgba(188,24,136,0.25);}
+.social-link:hover{transform:translateY(-2px); box-shadow:0 14px 24px rgba(188,24,136,0.34);}
+.social-link svg{width:18px; height:18px; fill:#fff;}
+.packages h2{font-size:clamp(1.8rem, 5vw, 2.7rem); margin-bottom:10px; color:#0f172a;}
+.packages .lead{max-width:760px; margin:0 auto 28px; color:var(--muted); line-height:1.6; font-size:15px;}
+
+ .cards{display:grid; grid-template-columns:repeat(2, minmax(280px, 1fr)); gap:22px; align-items:stretch;}
+
+.card{background:linear-gradient(145deg, rgba(255,255,255,0.98), rgba(248,251,255,0.97)); border-radius:24px; padding:22px; box-shadow:var(--shadow); border:1px solid #dfe7f2; transition:transform .25s ease, box-shadow .25s ease, background .25s ease, border-color .25s ease; text-align:left; min-height:150px; height:100%; display:flex; flex-direction:column; justify-content:flex-start;}
+.card.full-width{grid-column:1 / -1;}
+.package-link{display:flex; height:100%; text-decoration:none; color:inherit;}
+.card:hover{transform:translateY(-8px) scale(1.01); box-shadow:0 22px 36px rgba(37,99,235,0.18); background:linear-gradient(135deg, #edf5ff 0%, #ffffff 50%, #eafaf3 100%); border-color:#8ecbff;}
+.card:hover h3{color:#0b5fff;}
+.card h3{margin-bottom:10px; font-size:1.25rem; color:#0f172a; line-height:1.25;}
+.card p{font-size:15px; line-height:1.7; color:var(--muted);}
+.package-link{text-decoration:none; color:inherit; display:block; height:100%;}
+
+.contact{background:linear-gradient(145deg, #09111d, #111827); color:#fff; border-radius:24px; padding:34px 18px; margin:30px 0 40px; text-align:center; box-shadow:var(--shadow);}
+.contact h2{font-size:clamp(1.6rem, 5vw, 2.2rem); margin-bottom:12px;}
+.contact p{font-size:16px; line-height:1.7; color:#dce7f5; margin:6px 0;}
+
+@media (max-width:680px){
+  .hero{min-height:auto; padding:12px 0;}
+  .hero-content{padding:24px 14px; border-radius:20px;}
+  .logo{width:120px;}
+  .packages{padding-top:48px;}
+  .card{padding:18px;}
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="hero-content site-shell">
+
+<img src="logo.png" class="logo">
+
+<p class="eyebrow">Luxury • Family • Group Travel</p>
+
+<h1>LUXE VOYAGES</h1>
+
+<p>Explore our curated travel collection with Lakshadweep, Bali, Andaman, Kashmir, and more premium holiday packages.</p>
+
+<a class="btn" href="https://wa.me/918891985017" target="_blank">WhatsApp Us</a>
+<a class="social-link" href="https://www.instagram.com/luxevoyages.in?igsh=MWtnb2RveXp1anB6ZQ==" target="_blank" aria-label="Visit Luxe Voyages on Instagram" title="Instagram">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zm6.25-3.75a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25z"></path></svg>
+</a>
+<a class="btn" href="about.html" style="margin-left:10px;">About Us</a>
+
+<div class="badge-row">
+  <span class="badge">🏝️ Island packages</span>
+  <span class="badge">🏨 Luxury stays</span>
+  <span class="badge">24/7 customer support</span>
+</div>
+
+</div>
+
+</section>
+
+<section class="packages site-shell">
+
+<h2>Our Package</h2>
+
+<p class="lead">Choose from our selected island getaway options, starting with Lakshadweep and Bali.</p>
+
+<div class="cards">
+
+<a href="lakshadweep.html" class="package-link">
+<div class="card">
+<h3>🏝️ Lakshadweep Package</h3>
+<p>4 Days / 3 Nights • Agatti sightseeing • Luxury stays • Guided island experiences</p>
+</div>
+</a>
+
+<a href="bali.html" class="package-link">
+<div class="card">
+<h3>🌺 Bali Package</h3>
+<p>4 Days / 3 Nights • Beaches • Temple visits • Waterfalls • Premium island stay</p>
+</div>
+</a>
+
+<a href="kashmir.html" class="package-link">
+<div class="card">
+<h3>🏔️ Kashmir Package</h3>
+<p>5 Days / 4 Nights • Srinagar • Gulmarg • Pahalgam • Houseboat stay</p>
+</div>
+</a>
+
+<a href="andaman.html" class="package-link">
+<div class="card">
+<h3>🏝️ Andaman Islands – Havelock, Port Blair &amp; Neil Island</h3>
+<p>6 Days / 5 Nights • Island hopping • White sand beaches • Crystal clear waters</p>
+</div>
+</a>
+
+<a href="kerala.html" class="package-link">
+<div class="card">
+<h3>🌴 Premium Kerala Experience</h3>
+<p>6 Days / 5 Nights • Kochi • Munnar • Thekkady • Alleppey</p>
+</div>
+</a>
+
+<a href="kumily.html" class="package-link">
+<div class="card">
+<h3>🏞️ Corporate Escape to Kumily &amp; Meghamalai</h3>
+<p>2 Days / 1 Night • Group getaway • Office teams • ₹22,000 for 8 people</p>
+</div>
+</a>
+
+</div>
+
+</section>
+
+<section class="contact site-shell">
+
+<h2>Contact Us</h2>
+
+<p>📞 +91 8891985017</p>
+
+<p>24/7 customer support</p>
+
+<p>✈️ LUXE VOYAGES</p>
+
+<p>Your Family Travel Partner</p>
+
+</section>
+
+</body>
+</html>

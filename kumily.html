@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corporate Escape to Kumily & Meghamalai - LUXE VOYAGES</title>
+  <style>
+    :root{
+      --bg:#07111f;
+      --panel:rgba(9,15,27,0.88);
+      --text:#eff6ff;
+      --muted:#dbe7f7;
+      --accent:#25D366;
+      --line:rgba(255,255,255,0.12);
+      --shadow:0 18px 36px rgba(0,0,0,0.25);
+    }
+
+    *{ box-sizing:border-box; margin:0; padding:0; font-family: Arial, Helvetica, sans-serif; }
+
+    body{
+      min-height:100vh;
+      background:
+        linear-gradient(135deg, rgba(7,17,31,0.96), rgba(6,11,19,0.98)),
+        url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') center/cover fixed no-repeat;
+      color:var(--text);
+    }
+
+    .page{ width:min(1180px, calc(100% - 24px)); margin:0 auto; padding:18px 0 40px; }
+    .top{ display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:14px; }
+    .pill{ display:inline-block; border:1px solid var(--line); background:rgba(255,255,255,0.08); color:#fff; border-radius:999px; padding:8px 12px; font-size:12px; text-transform:uppercase; letter-spacing:1px; backdrop-filter:blur(8px); }
+
+    .ghost-btn,.btn{ display:inline-flex; align-items:center; justify-content:center; text-decoration:none; border-radius:999px; font-weight:800; padding:10px 14px; border:1px solid transparent; transition:transform .18s ease; cursor:pointer; font-size:14px; }
+    .ghost-btn{ background:rgba(255,255,255,0.08); color:#fff; border-color:var(--line); backdrop-filter:blur(8px); }
+    .ghost-btn:hover,.btn:hover{ transform:translateY(-1px); }
+    .btn{ background:linear-gradient(135deg, var(--accent), #1fbf5a); color:#fff; box-shadow:0 8px 16px rgba(37,211,102,0.25); }
+
+    .hero{ display:grid; grid-template-columns:1.1fr .9fr; gap:18px; margin-bottom:18px; }
+    .card{ background:linear-gradient(180deg, rgba(9,15,27,0.9), rgba(10,18,30,0.95)); border:1px solid var(--line); border-radius:28px; box-shadow:var(--shadow); padding:18px; backdrop-filter:blur(10px); }
+    .eyebrow{ font-size:12px; text-transform:uppercase; letter-spacing:2px; color:#8ecbff; }
+    h1{ font-size:clamp(2rem, 5vw, 3rem); line-height:1.05; margin:8px 0 10px; }
+    p{ color:var(--muted); line-height:1.6; font-size:15px; }
+    .highlight-badge{ display:inline-block; margin-top:8px; padding:8px 10px; border-radius:999px; background:linear-gradient(135deg, rgba(56,189,248,0.18), rgba(37,211,102,0.12)); border:1px solid rgba(56,189,248,0.25); color:#dff7ff; font-size:12px; font-weight:700; letter-spacing:0.4px; }
+
+    .mini-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:10px; margin-top:14px; }
+    .mini{ background:rgba(255,255,255,0.06); border:1px solid var(--line); border-radius:16px; padding:10px; }
+    .mini strong{ display:block; color:#fff; font-size:13px; margin-bottom:4px; }
+    .mini span{ color:var(--muted); font-size:13px; line-height:1.5; }
+
+    .price-box{ display:flex; flex-direction:column; justify-content:space-between; }
+    .price-tag{ font-size:1.8rem; font-weight:800; color:#fff; }
+    .price-note{ color:var(--muted); font-size:14px; line-height:1.5; margin:8px 0 12px; }
+    .stats{ display:grid; gap:10px; margin-top:12px; }
+    .stat{ display:flex; justify-content:space-between; gap:10px; background:rgba(255,255,255,0.05); border:1px solid var(--line); border-radius:14px; padding:10px 12px; }
+    .stat b{ color:#fff; font-size:14px; }
+    .stat span{ color:var(--muted); font-size:13px; }
+    .cta{ display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+
+    .section-grid{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:18px; }
+    .panel{ padding:18px; }
+    .panel h2{ color:#fff; font-size:1.15rem; margin-bottom:10px; }
+    .panel ul{ padding-left:16px; color:var(--muted); line-height:1.6; font-size:14px; }
+    .panel li{ margin-bottom:8px; }
+
+    .itinerary{ display:grid; gap:10px; margin-top:10px; }
+    .step{ background:rgba(255,255,255,0.05); border:1px solid var(--line); border-radius:16px; padding:12px; }
+    .step strong{ display:block; color:#fff; margin-bottom:4px; font-size:14px; }
+
+    .gallery-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:14px; margin-top:12px; }
+    .gallery-item{ border:1px solid var(--line); border-radius:18px; overflow:hidden; background:rgba(255,255,255,0.06); }
+    .gallery-item img{ width:100%; height:180px; object-fit:cover; display:block; }
+    .gallery-caption{ padding:10px; color:var(--muted); font-size:13px; line-height:1.5; }
+
+    .footer-note{ color:#dbe7f7; text-align:center; font-size:12px; margin-top:14px; }
+
+    @media (max-width:980px){ .hero, .section-grid{ grid-template-columns:1fr; } }
+    @media (max-width:640px){ .mini-grid, .gallery-grid{ grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="top">
+      <span class="pill">Corporate Group • 2 Days / 1 Night</span>
+      <a class="ghost-btn" href="index.html">← Back to Home</a>
+    </div>
+
+    <section class="hero">
+      <article class="card">
+        <p class="eyebrow">LUXE VOYAGES</p>
+        <h1>Corporate Escape to Kumily &amp; Meghamalai</h1>
+        <p>
+          A short, premium 2-day getaway crafted for office teams, corporate staff, associations, friend groups, and families who want a refreshing break from routine. The trip combines the cool mountain air of Kumily, scenic Western Ghats roads, and the untouched beauty of Meghamalai for a perfect mix of comfort, bonding, and nature.
+        </p>
+        <span class="highlight-badge">✅ 2 Days • 1 Night • Premium AC 15-Seater Traveller • Starting from ₹22,000 for 8 people</span>
+
+        <div class="mini-grid">
+          <div class="mini"><strong>Perfect for</strong><span>Corporate teams, staff outings, associations, friend groups, and family weekend trips.</span></div>
+          <div class="mini"><strong>Travel style</strong><span>Comfortable group travel with reclining seats, LED TV, music system, charging points, and a professional driver.</span></div>
+          <div class="mini"><strong>Route</strong><span>Trivandrum / Client Location → Kumily → Meghamalai → Return</span></div>
+          <div class="mini"><strong>Stay</strong><span>1 night premium hotel stay in Kumily with relaxed evening time for team bonding.</span></div>
+        </div>
+      </article>
+
+      <article class="card price-box">
+        <div>
+          <p class="eyebrow">Group Package Rate</p>
+          <div class="price-tag">₹22,000 for 8 people</div>
+          <p class="price-note">This exclusive package is designed for small to medium groups who want a short escape with comfort, scenic travel, and easy coordination.</p>
+          <div class="stats">
+            <div class="stat"><b>Duration</b><span>2 Days / 1 Night</span></div>
+            <div class="stat"><b>Transport</b><span>Premium AC 15-Seater Traveller</span></div>
+            <div class="stat"><b>Pickup</b><span>Trivandrum or client location</span></div>
+            <div class="stat"><b>Best for</b><span>Corporate / group / family getaway</span></div>
+          </div>
+        </div>
+
+        <div class="cta">
+          <a class="btn" href="https://wa.me/918891985017" target="_blank">Enquire on WhatsApp</a>
+          <a class="ghost-btn" href="index.html">Back to Home</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section-grid">
+      <article class="card panel">
+        <h2>✅ Package Inclusions</h2>
+        <ul>
+          <li>Pickup &amp; drop from client location / Trivandrum</li>
+          <li>Premium AC 15-Seater Traveller with reclining seats, music system, LED TV, ambient lighting, charging points, and luggage space</li>
+          <li>Experienced professional driver</li>
+          <li>Fuel, toll, road tax, and parking charges</li>
+          <li>1 night premium hotel accommodation in Kumily</li>
+          <li>Kumily local sightseeing</li>
+          <li>Meghamalai visit and entry / permissions</li>
+          <li>Team travel coordination and itinerary planning support</li>
+        </ul>
+      </article>
+
+      <article class="card panel">
+        <h2>❌ Package Exclusions</h2>
+        <ul>
+          <li>Breakfast, lunch, and dinner</li>
+          <li>Personal expenses and shopping</li>
+          <li>Additional adventure activities</li>
+          <li>Optional Jeep Safari</li>
+          <li>Anything not specifically mentioned in inclusions</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="card panel" style="margin-top:18px;">
+      <h2>📅 Day-wise Itinerary</h2>
+      <div class="itinerary">
+        <div class="step"><strong>Day 1 – Scenic Journey to Kumily</strong>Pickup from office or designated location at 05:30 AM. Travel through the Western Ghats till 11:00 AM, check in to the hotel in Kumily, enjoy lunch on your own, and spend the afternoon on local sightseeing with the highlighted attractions of Panjalimedu and Parauthumpara, along with a grape farm visit, tea plantation viewpoints, spice plantation exterior visits, scenic mountain stops, shopping areas, and photo points. Evening return to hotel for overnight stay.</div>
+        <div class="step"><strong>Day 2 – Meghamalai Adventure &amp; Return</strong>Start early at 05:00 AM for Meghamalai, one of South India’s most pristine mountain landscapes. Enjoy nature walks, scenic trekking, photography, viewpoints, and forest landscapes. After lunch break, return to your original pickup point by 07:00 PM to 08:00 PM.</div>
+      </div>
+    </section>
+
+    <section class="card panel" style="margin-top:18px;">
+      <h2>🌄 Why this package attracts corporate and group travelers</h2>
+      <p>
+        This package is thoughtfully designed for people who want a short getaway without the hassle of long planning. It offers a comfortable travel experience through the Western Ghats, a premium AC group vehicle, a peaceful hotel stay, and enough scenic stops to make the trip feel refreshing instead of tiring. Kumily brings in the tea estate views and mountain atmosphere, while Meghamalai adds the thrill of high-altitude landscapes, mist-covered valleys, forests, and photo-worthy viewpoints.
+      </p>
+      <p style="margin-top:10px;">
+        For offices, staff outings, associations, and friend groups, it gives the perfect balance of team bonding, relaxation, and low-stress travel planning. The package is affordable, easy to coordinate, and specially curated for travelers who want the beauty of Kerala’s hill country in just 2 days.
+      </p>
+    </section>
+
+    <section class="card panel" style="margin-top:18px;">
+      <h2>📸 Scenic Highlights</h2>
+      <p>These mountain views, tea estate landscapes, and high-range scenery make the package highly attractive for groups looking for a refreshing weekend escape.</p>
+      <div class="gallery-grid">
+        <article class="gallery-item">
+          <img src="file:///C:/Users/pappu/OneDrive/Desktop/LV/MUNNAR/IMG_2519.JPG" alt="Tea valley road view in the hill country" />
+        </article>
+        <article class="gallery-item">
+          <img src="file:///C:/Users/pappu/OneDrive/Desktop/LV/MUNNAR/IMG_2514.JPG" alt="Real tea estate and valley scenery" />
+        </article>
+        <article class="gallery-item">
+          <img src="file:///C:/Users/pappu/OneDrive/Desktop/LV/MUNNAR/IMG_2534.JPG" alt="Green mountain landscape near Kumily" />
+        </article>
+        <article class="gallery-item">
+          <img src="file:///C:/Users/pappu/OneDrive/Desktop/LV/MUNNAR/IMG_2547.JPG" alt="Real hill-country landscape for Meghamalai style travel" />
+        </article>
+      </div>
+    </section>
+
+    <section class="card panel" style="margin-top:18px;">
+      <h2>💡 Optional Add-On</h2>
+      <ul>
+        <li>Off-road Jeep Safari – ₹2,500 per Jeep (maximum 5 persons)</li>
+        <li>Plantation guided tours if available</li>
+        <li>Extra photo stops or custom group coordination on request</li>
+      </ul>
+    </section>
+
+    <p class="footer-note">WhatsApp: +91 8891985017 • Instagram: <a href="https://www.instagram.com/luxevoyages.in?igsh=MWtnb2RveXp1anB6ZQ==" target="_blank" style="color:#8ecbff; text-decoration:none;">@luxevoyages.in</a></p>
+  </main>
+</body>
+</html>
